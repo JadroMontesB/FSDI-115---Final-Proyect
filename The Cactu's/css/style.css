@@ -4,16 +4,6 @@
     box-sizing: border-box;
 }
 
-html{
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-}
-
 /*Carrusel*/
 
 .carrusel{
@@ -53,6 +43,63 @@ body {
     100%{margin-left: -300%;}
 }
 
+
+
+
+/*  Menu con imagenes de iconos*/
+
+.fondo{
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 2rem;/*la distancia entre los cuadros */
+    grid-template-columns: repeat(12, 1fr);
+    padding: 1,8rem;/**La posicion entre el carrusel y los cuadros */
+    margin: 0 auto;
+    max-width: 70rem;/**El tamano de los cuadros */
+    width: 100%;
+  }
+  
+  .razones {
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .tarjeta {
+    border-radius: 1rem;
+    grid-column-end: span 3;/*cuantos pueden estar en una columna */
+    padding: 1rem;
+  }
+  
+  .tarjeta .img-icon{
+    max-width: 10rem;
+    width: 100%;
+  }
+  
+  h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  
+  @media (max-width: 35rem) {
+
+  
+    .fondo{
+      grid-gap: 1,8rem 0;
+    }
+  
+  .fondo > * {
+      grid-column-end: span 12;
+    }
+  
+  }
 
 /*Footer */
 footer{
